@@ -11,16 +11,16 @@ class Anime:
     def view(self, title: str):
         return Anime.lists[title]
 
-    def add(self, title: str, version: str):
-        Anime.lists[title] = {"Ep": 0, "version": version}
+    def add(self, title: str, ep: float, version: str):
+        Anime.lists[title] = {"Ep": ep, "version": version}
     
     def remove(self, title: str):
         del Anime.lists[title]
 
-    def add_ep(self, title: str, nums: int):
+    def add_ep(self, title: str, nums: float):
         Anime.lists[title]["Ep"] += nums
     
-    def sub_ep(self, title: str, nums: int):
+    def sub_ep(self, title: str, nums: float):
         Anime.lists[title]["Ep"] -= nums
 
     def save(self):
@@ -38,16 +38,16 @@ class Manga:
     def view(self, title: str):
         return Manga.lists[title]
 
-    def add(self, title: str):
-        Manga.lists[title] = {"Ch": 0}
+    def add(self, title: str, ch: float):
+        Manga.lists[title] = {"Ch": ch}
     
     def remove(self, title: str):
         del Manga.lists[title]
 
-    def add_ep(self, title: str, nums: int):
+    def add_ep(self, title: str, nums: float):
         Manga.lists[title]["Ch"] += nums
     
-    def sub_ep(self, title: str, nums: int):
+    def sub_ep(self, title: str, nums: float):
         Manga.lists[title]["Ch"] -= nums
 
     def save(self):
@@ -66,16 +66,16 @@ class Webtoon:
     def view(self, title: str):
         return Webtoon.lists[title]
 
-    def add(self, title: str):
-        Webtoon.lists[title] = {"Ep": 0}
+    def add(self, title: str, Ep:float):
+        Webtoon.lists[title] = {"Ep": Ep}
     
     def remove(self, title: str):
         del Webtoon.lists[title]
 
-    def add_ep(self, title: str, nums: int):
+    def add_ep(self, title: str, nums: float):
         Webtoon.lists[title]["Ep"] += nums
     
-    def sub_ep(self, title: str, nums: int):
+    def sub_ep(self, title: str, nums: float):
         Webtoon.lists[title]["Ep"] -= nums
 
     def save(self):
